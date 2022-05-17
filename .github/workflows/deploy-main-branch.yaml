@@ -36,8 +36,11 @@ jobs:
     
   deploy:
     runs-on: ubuntu-latest
-    steps:
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
+    steps:
     - name: Log into Azure CLI with service principal
       uses: azure/login@v1.1
       with:
@@ -50,6 +53,7 @@ jobs:
     
     - name: Deploy to stage env
       uses: azure/webapps-deploy@v1
+      id: deploy-to-webapp
       with: 
         app-name: ${{ env.WEBAPP_NAME }}
         slot-name:  ${{ env.SLOT_NAME }}
