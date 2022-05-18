@@ -57,6 +57,11 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: java-app
+
+    - name: Log into Azure CLI with service principal
+      uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Deploy to slot on staging site
       uses: azure/webapps-deploy@v1
