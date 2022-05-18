@@ -5,6 +5,8 @@ on:
     branches:
     - master
 
+concurrency: ci-${{ github.event.number }}
+
 env:
   WEBAPP_NAME: tomcat-app
   RESOURCE_GROUP: freeberg-tomcat-slots-demo
