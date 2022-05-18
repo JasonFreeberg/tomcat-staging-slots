@@ -34,12 +34,12 @@ jobs:
         name: java-app
         path: '${{ github.workspace }}/target/*.war'
     
-  deploy:
+  deploy-to-stage:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      name: 'Staging'
+      url: ${{ steps.deploy-to-stage.outputs.webapp-url }}
 
     steps:
     - name: Log into Azure CLI with service principal
@@ -54,11 +54,24 @@ jobs:
     
     - name: Deploy to stage env
       uses: azure/webapps-deploy@v1
-      id: deploy-to-webapp
+      id: deploy-to-stage
       with: 
         app-name: ${{ env.WEBAPP_NAME }}
         slot-name:  ${{ env.SLOT_NAME }}
         package: '*.war'
+
+  release-to-prod:
+    needs: deploy-to-stage
+    runs-on: ubuntu-latest
+    environment:
+      name: 'Production'
+      url: https://tomcat-app.azurewebsites.net/
+
+    steps:
+    - name: Log into Azure CLI with service principal
+      uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Swap slots
       run: az webapp deployment slot swap -s ${{ env.SLOT_NAME }} -n ${{ env.WEBAPP_NAME }} -g ${{ env.RESOURCE_GROUP }}
