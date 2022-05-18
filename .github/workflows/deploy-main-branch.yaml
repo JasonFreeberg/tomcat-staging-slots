@@ -12,7 +12,6 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -35,6 +34,7 @@ jobs:
         path: '${{ github.workspace }}/target/*.war'
     
   deploy-to-stage:
+    name: Deploy to staging
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -61,6 +61,7 @@ jobs:
         package: '*.war'
 
   release-to-prod:
+    name: Release to prod
     needs: deploy-to-stage
     runs-on: ubuntu-latest
     environment:
