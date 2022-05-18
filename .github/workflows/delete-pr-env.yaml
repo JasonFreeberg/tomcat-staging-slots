@@ -16,7 +16,6 @@ env:
 
 jobs:
   delete-slot:
-    
     runs-on: ubuntu-latest
 
     steps:
@@ -27,3 +26,15 @@ jobs:
     
     - name: Delete slot on staging site
       run: az webapp deployment slot delete --resource-group $RESOURCE_GROUP  --name $WEBAPP_NAME --slot $SLOT_NAME
+
+  delete-deployment:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+
+    steps:
+      - name: Delete Deployment Environment
+        uses: strumwolf/delete-deployment-environment@v2.0.1
+        with:
+          environment: "PR #${{ github.event.number }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
