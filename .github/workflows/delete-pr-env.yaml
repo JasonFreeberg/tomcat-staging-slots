@@ -29,8 +29,6 @@ jobs:
 
   delete-deployment:
     runs-on: ubuntu-latest
-    permissions:
-      deployments: write
 
     steps:
       - name: Delete Deployment Environment
@@ -38,3 +36,4 @@ jobs:
         with:
           environment: "PR #${{ github.event.number }}"
           token: ${{ secrets.GITHUB_TOKEN }}
+          onlyRemoveDeployments: true
