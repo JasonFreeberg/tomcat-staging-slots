@@ -16,7 +16,7 @@ env:
 
 jobs:
   delete-slot:
-
+    
     runs-on: ubuntu-latest
 
     steps:

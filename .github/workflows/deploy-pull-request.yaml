@@ -51,6 +51,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build, set-up-staging-env]
+    permissions:
+      issues: write
 
     steps:
     - name: Download artifact from build job
