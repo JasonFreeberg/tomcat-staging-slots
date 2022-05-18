@@ -59,27 +59,5 @@ jobs:
         slot-name:  ${{ env.SLOT_NAME }}
         package: '*.war'
 
-    # - name: Swap slots
-    #   run: az deployment slot swap ...
-
-  test-and-release:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14.x'
-    
-    - run: cd e2e-tests
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-
-    - name: Run Playwright tests
-      if: ${{ jobs.deploy.status == 'success' }}
-      run: npx playwright test
+    - name: Swap slots
+      run: az webapp deployment slot swap -s ${{ env.SLOT_NAME }} -n ${{ env.WEBAPP_NAME }} -g ${{ env.RESOURCE_GROUP }}
