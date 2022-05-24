@@ -54,7 +54,7 @@ jobs:
     needs: [build, set-up-test-env]
     environment:
       name: "PR #${{ github.event.number }}"
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: "${{ steps.deploy-to-webapp.outputs.webapp-url }}/app"
     permissions:
       pull-requests: write
 
@@ -81,7 +81,7 @@ jobs:
       uses: mshick/add-pr-comment@v1
       with:
         message: |
-          ## Preview link: https://${{ env.WEBAPP_NAME }}-${{env.SLOT_NAME }}.azurewebsites.net 
+          ## Preview link: https://${{ env.WEBAPP_NAME }}-${{env.SLOT_NAME }}.azurewebsites.net/app
           
           - Your changes have been deployed to the preview site. The preview site will update as you add more commits to this branch.
           - The preview link is shareable, but will be deleted when the pull request is merged or closed.

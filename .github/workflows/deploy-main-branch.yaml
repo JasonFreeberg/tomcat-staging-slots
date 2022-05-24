@@ -66,7 +66,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: 'Production'
-      url: https://tomcat-app.azurewebsites.net/
+      url: https://tomcat-app.azurewebsites.net/app
 
     steps:
     - name: Log into Azure CLI with service principal
