@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
   <header>
     <div class="collapse bg-dark" id="navbarHeader">
       <div class="container">
