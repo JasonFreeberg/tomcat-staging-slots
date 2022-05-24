@@ -59,7 +59,7 @@
         <h1 class="jumbotron-heading">Tomcat on Azure App Service</h1>
         <p class="lead text-muted">App Sevice offers managed runtimes for Tomcat 8.5, 9.0, and 10.0 for both Windows and Linux.</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Try App Service</a>
+          <a href="#" class="btn btn-danger my-2">Try App Service</a>
           <a href="#" class="btn btn-secondary my-2">Learn More</a>
         </p>
       </div>
