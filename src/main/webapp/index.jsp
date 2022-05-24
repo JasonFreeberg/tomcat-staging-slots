@@ -163,7 +163,7 @@
 
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+              <img class="card-img-top"  src="https://raw.githubusercontent.com/JasonFreeberg/tomcat-staging-slots/main/images/CLO17_azure_001.jpg" alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -178,7 +178,7 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+              <img class="card-img-top" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/07/11/11/harold-0.jpg"  alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -193,7 +193,7 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+              <img class="card-img-top" src="https://raw.githubusercontent.com/JasonFreeberg/tomcat-staging-slots/main/images/MDC22_ServerBlade_006.jpg" alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
