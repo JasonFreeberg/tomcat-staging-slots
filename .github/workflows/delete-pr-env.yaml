@@ -29,11 +29,12 @@ jobs:
 
   delete-deployment:
     runs-on: ubuntu-latest
+    permissions: write-all
 
     steps:
       - name: Delete Deployment Environment
         uses: strumwolf/delete-deployment-environment@v2.0.1
         with:
           environment: "PR #${{ github.event.number }}"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           onlyRemoveDeployments: true
