@@ -29,7 +29,8 @@ jobs:
 
   delete-deployment:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      deployments: write
 
     steps:
       - name: Delete Deployment Environment
