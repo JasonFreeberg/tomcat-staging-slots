@@ -25,7 +25,7 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">About</h4>
-            <p class="text-muted">App Sevice offers managed runtimes for Tomcat 8.5, 9.0, and 10.0 for both Windows and Linux.</p>
+            <p class="text-muted">TEST App Sevice offers managed runtimes for Tomcat 8.5, 9.0, and 10.0 for both Windows and Linux.</p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Contact</h4>
